@@ -12,13 +12,13 @@ function App() {
     <div className="App">
       <ThemeProvider theme={customTheme}>
         <CssBaseline enableColorScheme />
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/l-et-m" style={{ textDecoration: "none" }}>
           <Hero />
         </Link>
         <Container maxWidth="md">
           <Routes>
-            <Route path="/" element={<Accueil />} />
-            <Route path="/dormir" element={<Dormir />} />
+            <Route path="/l-et-m" element={<Accueil />} />
+            <Route path="/l-et-m/dormir" element={<Dormir />} />
             <Route path="*" element={<h1>Page not found.</h1>} />
           </Routes>
         </Container>
