@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 .App {
   /* text-align: center; */
-  /* background: linear-gradient(to bottom, #e0e1e9, #ffffff);*/ 
+  /* background: linear-gradient(to bottom, #e0e1e9, #ffffff);*/
+}
+
+html {
+  overflow-y: scroll;
 }
