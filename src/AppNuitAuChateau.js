@@ -1,17 +1,17 @@
 import { customTheme } from "./themes/theme.ts";
 import "./App.css";
 import Hero from "./components/Hero";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Table } from "@mui/material";
 
-function App() {
+function AppNuitAuChateau() {
   return (
-    <div className="App">
+    <div className="AppNuitAuChateau">
       <ThemeProvider theme={customTheme}>
         <CssBaseline enableColorScheme />
-        <Hero />
+        <Table>Helo</Table>
       </ThemeProvider>
     </div>
   );
 }
 
-export default App;
+export default AppNuitAuChateau;
