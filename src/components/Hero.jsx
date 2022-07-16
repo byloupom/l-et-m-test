@@ -64,7 +64,7 @@ const Hero = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button>Voir la liste</Button>
+              <Button variant="contained" target="_blank" href="https://www.millemercismariage.com/louis-marianne/liste.html">Voir la liste</Button>
             </CardActions>
           </Card>
         </Grid>
