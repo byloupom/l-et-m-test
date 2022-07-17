@@ -65,7 +65,10 @@ const Feed = () => {
             🏰 Dormir au château.
           </Typography>
           <Typography color="text.secondary">
-            <Typography>Pour ceux qui ont demandé à dormir sur place, notez le nom de votre gite et réglez votre nuit dès à présent.</Typography>
+            <Typography>
+              Pour ceux qui ont demandé à dormir sur place, notez le nom de
+              votre gite et réglez votre nuit dès à présent.
+            </Typography>
           </Typography>
         </CardContent>
         <CardActions>
@@ -88,7 +91,7 @@ const Feed = () => {
           </Typography>
           <Typography color="text.secondary">
             <Typography>
-              Vote présence compte déjà pour beaucoup ! Mais si vous insistez un
+              Votre présence compte déjà pour beaucoup ! Mais si vous insistez un
               emplacement sera prévu pour déposer vos attentions. Vous pouvez
               également parcourir notre liste de mariage.
             </Typography>
@@ -101,6 +104,34 @@ const Feed = () => {
             href="https://www.millemercismariage.com/louis-marianne/liste.html"
           >
             Voir la liste
+          </Button>
+        </CardActions>
+      </Card>
+      <Card
+        id="faireUnCadeau"
+        sx={{
+          mt: 4,
+          boxShadow:
+            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+        }}
+      >
+        <CardContent>
+          <Typography variant="h6" fontWeight={"bold"} gutterBottom>
+            💒 Répéter les chants.
+          </Typography>
+          <Typography color="text.secondary">
+            <Typography>
+              Nous n'avons pas prévu de chorale car c'est VOUS TOUS la chorale ! N'hésitez pas à répéter les chants de messe avant de venir :) 
+            </Typography>
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant="contained"
+            target="_blank"
+            href="https://www.millemercismariage.com/louis-marianne/liste.html"
+          >
+            Répéter
           </Button>
         </CardActions>
       </Card>
