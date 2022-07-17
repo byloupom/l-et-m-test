@@ -20,7 +20,7 @@ const Hero = () => {
               Les Bétises de Cambray
             </Typography>
           </Box>
-          <Typography color="text.secondary" sx={{ mt: 1 }}>
+          <Typography color="text.secondary" sx={{ mt: 1, fontFamily: "Monospace" }}>
             Mariage de Marianne et Louis - 10 Sept. 2022
           </Typography>
         </Grid>

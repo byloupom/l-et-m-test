@@ -7,4 +7,7 @@ export const customTheme = createTheme({
         secondary: '#958BAD'
       }
     },
+  typography: {
+    fontWeightBold: 900
+  },
   });

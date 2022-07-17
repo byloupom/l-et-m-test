@@ -1,4 +1,4 @@
-import { Check, Payment, Smartphone } from "@mui/icons-material";
+import { Check, Home, Payment, Smartphone } from "@mui/icons-material";
 import {
   TableContainer,
   Typography,
@@ -10,10 +10,8 @@ import {
   TableBody,
   Chip,
   Box,
-  Stack,
-  Card,
-  CardContent,
   Button,
+  Fab,
 } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -26,6 +24,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Alert from "@mui/material/Alert";
+import betise from "../../images/betise.png";
+import { Link } from "react-router-dom";
 
 export default function Dormir() {
   const [open, setOpen] = React.useState(false);
@@ -40,6 +40,22 @@ export default function Dormir() {
 
   return (
     <div>
+      <Link to="/l-et-m/" style={{ textDecoration: "none" }}>
+        <Fab
+          color="primary"
+          aria-label="Accueil"
+          sx={{
+            margin: 0,
+            bottom: "auto",
+            left: 20,
+            top: 20,
+            right: "auto",
+            position: "fixed",
+          }}
+        >
+          <Home />
+        </Fab>
+      </Link>
       <Typography gutterBottom mb={2}>
         Pour ceux qui ont demandé à dormir sur place, notez le nom de votre gite
         et réglez votre nuit dès à présent.
@@ -47,12 +63,18 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Pavillon du régisseur
+        </Typography>
+        <Typography variant="body2">Commodités: 2 WC, 2 douches</Typography>
+      </Box>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>Vos prénoms</TableCell>
-              <TableCell>Votre gite</TableCell>
+              <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
               <TableCell align="right">Prix</TableCell>
               <TableCell>Règlement</TableCell>
@@ -61,18 +83,60 @@ export default function Dormir() {
           <TableBody>
             <TableRow>
               <TableCell>Louis & Marianne</TableCell>
-              <TableCell>Gîte du chasseur</TableCell>
-              <TableCell>Chambre 1</TableCell>
-              <TableCell align="right">24€</TableCell>
+              <TableCell>Chambre RdC</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
               <TableCell>
                 <Chip label="Réglé" icon={<Check />} />
               </TableCell>
             </TableRow>
             <TableRow>
+              <TableCell>Noélie & Elisabeth</TableCell>
+              <TableCell>Salon RdC</TableCell>
+              <TableCell>1 canapé lit</TableCell>
+              <TableCell align="right">14€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Nicole & Justine</TableCell>
+              <TableCell>Chambre #1, 1er étage</TableCell>
+              <TableCell>2 lits simples 1 lit bébé</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Marthe, Aubry & Victoire</TableCell>
+              <TableCell>Chambre #2, 1er étage</TableCell>
+              <TableCell>3 lits simples</TableCell>
+              <TableCell align="right">42€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
               <TableCell>Maëlle & Elvire</TableCell>
-              <TableCell>Gîte du chasseur</TableCell>
-              <TableCell>Chambre 1</TableCell>
-              <TableCell align="right">24€</TableCell>
+              <TableCell>Chambre #3, 1er étage</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -85,9 +149,707 @@ export default function Dormir() {
           </TableBody>
         </Table>
       </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
       {/* /////////////////////////// */}
       {/* // END Table */}
       {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Maison du Garde
+        </Typography>
+        <Typography variant="body2">Commodités: 2 WC, 1 douche</Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Papé & Mamie</TableCell>
+              <TableCell>Chambre RdC</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>GM</TableCell>
+              <TableCell>Salon RdC</TableCell>
+              <TableCell>1 canapé lit</TableCell>
+              <TableCell align="right">14€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Catherine, Marion & Séverin</TableCell>
+              <TableCell>Chambre #1, 1er étage</TableCell>
+              <TableCell>2 lits simples 1 lit bébé</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Christine, Anne-Marie, Roselyne</TableCell>
+              <TableCell>Chambre #2, 1er étage</TableCell>
+              <TableCell>3 lits simples</TableCell>
+              <TableCell align="right">42€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Pierre & Mireille</TableCell>
+              <TableCell>Chambre #3, 1er étage</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Logis du cocher{" "}
+        </Typography>
+        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Jacky & Roselyne</TableCell>
+              <TableCell>Salon RdC</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Papou & Jean-Yves</TableCell>
+              <TableCell>Salon RdC</TableCell>
+              <TableCell>2 lit simples</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Annexe de la Richer{" "}
+        </Typography>
+        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>François & Sylvana</TableCell>
+              <TableCell>Chambre #1</TableCell>
+              <TableCell>2 lits simples</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>François & Bernadette</TableCell>
+              <TableCell>Chambre #2</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Dortoir Ecuries
+        </Typography>
+        <Typography variant="body2">
+          Commodités: WC et douches partagées
+        </Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Shirley & Maxime</TableCell>
+              <TableCell>Box #1</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">26€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Christian & Lara</TableCell>
+              <TableCell>Box #2</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">26€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Chloé & Côme</TableCell>
+              <TableCell>Box #3</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">26€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Emeline & Mathieu</TableCell>
+              <TableCell>Box #4</TableCell>
+              <TableCell>1 lit double</TableCell>
+              <TableCell align="right">26€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Dortoir Garage{" "}
+        </Typography>
+        <Typography variant="body2">
+          Commodités: WC et douches partagées
+        </Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Josquin</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Colombe</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Aurélien</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Jean</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Domitille</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Yohann</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Emmanuel</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Clarisse</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Long</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mt={6}
+        mb={6}
+        sx={{ transform: "rotate(13deg)" }}
+      >
+        <img src={betise} alt="Bétise de Cambray" width="100px" />
+      </Box>
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
+      {/* /////////////////////////// */}
+      {/* // START Table */}
+      {/* /////////////////////////// */}
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={"bold"}>
+          Dortoir Remise aux calèches{" "}
+        </Typography>
+        <Typography variant="body2">
+          Commodités: WC et douches partagées
+        </Typography>
+      </Box>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Vos prénoms</TableCell>
+              <TableCell>Votre chambre</TableCell>
+              <TableCell>Votre lit</TableCell>
+              <TableCell align="right">Prix</TableCell>
+              <TableCell>Règlement</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Marine</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Bérengère</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Marion C.</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Aurélie</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Flora</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Cédric</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Florian</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Alix</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Jean-Gabriel</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Antoine</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Vincent</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+      {/* /////////////////////////// */}
+      {/* // END Table */}
+      {/* /////////////////////////// */}
+
       {/* /////////////////////////// */}
       {/* // START Dialog Modal OnClick */}
       {/* /////////////////////////// */}
@@ -115,8 +877,12 @@ export default function Dormir() {
           </Alert>
           {/* // START Accordion */}
           <Box mt={2}>
-            <Accordion sx={{boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",}}>
+            <Accordion
+              sx={{
+                boxShadow:
+                  "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+              }}
+            >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -125,7 +891,7 @@ export default function Dormir() {
                 <Typography fontWeight={"bold"}>Payer par virement</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography mb={2}>
+                <Typography mb={2}>
                   Rien de plus classique ! Voici les informations de paiement:
                 </Typography>
                 <Typography fontWeight={"bold"} fontSize={13}>
@@ -137,11 +903,17 @@ export default function Dormir() {
                 <Typography fontWeight={"bold"} mt={2} fontSize={13}>
                   IBAN
                 </Typography>
-                <Typography fontSize={13}>FR76 4061 8802 9700 0400 0776 919</Typography>
+                <Typography fontSize={13}>
+                  FR76 4061 8802 9700 0400 0776 919
+                </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={{boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",}}>
+            <Accordion
+              sx={{
+                boxShadow:
+                  "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+              }}
+            >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2a-content"
@@ -171,8 +943,12 @@ export default function Dormir() {
                 </Button>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={{boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",}}>
+            <Accordion
+              sx={{
+                boxShadow:
+                  "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+              }}
+            >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel3a-content"
@@ -182,8 +958,9 @@ export default function Dormir() {
                 <Smartphone ml={2} />
               </AccordionSummary>
               <AccordionDetails>
-              <Typography mb={2}>
-              Si vous avez Lydia, vous n’avez qu’à taper le numéro de Louis (06 25 10 09 32), ainsi que le montant à envoyer. C’est tout ! 
+                <Typography mb={2}>
+                  Si vous avez Lydia, vous n’avez qu’à taper le numéro de Louis
+                  (06 25 10 09 32), ainsi que le montant à envoyer. C’est tout !
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -199,7 +976,6 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // END Dialog Modal OnClick */}
       {/* /////////////////////////// */}
-      
     </div>
   );
 }
