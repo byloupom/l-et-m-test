@@ -103,7 +103,7 @@ export default function Dormir() {
               <TableCell>Noélie & Elisabeth</TableCell>
               <TableCell>Salle à Manger RdC</TableCell>
               <TableCell>1 lit double (canapé lit)</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -120,7 +120,7 @@ export default function Dormir() {
                 2 lits simples 1 lit bébé (prévoir un tapis de sol et duvet pour
                 Victoire)
               </TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -134,7 +134,7 @@ export default function Dormir() {
               <TableCell>Nicole, Justine, et Françoise J.</TableCell>
               <TableCell>Chambre #2, 1er étage</TableCell>
               <TableCell>3 lits simples</TableCell>
-              <TableCell align="right">42€</TableCell>
+              <TableCell align="right">93€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -148,7 +148,7 @@ export default function Dormir() {
               <TableCell>Louis & Marianne</TableCell>
               <TableCell>Chambre #3, 1er étage</TableCell>
               <TableCell>1 lit double</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip label="Réglé" icon={<Check />} />
               </TableCell>
@@ -195,7 +195,7 @@ export default function Dormir() {
               <TableCell>Papé & Mamie</TableCell>
               <TableCell>Rez-de-chaussée</TableCell>
               <TableCell>1 lit double (canapé lit)</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -209,7 +209,7 @@ export default function Dormir() {
               <TableCell>Catherine, Marion & Séverin</TableCell>
               <TableCell>Chambre #1, 1er étage</TableCell>
               <TableCell>2 lits simples 1 lit bébé</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -223,7 +223,7 @@ export default function Dormir() {
               <TableCell>Christine, Anne-Marie, Roselyne</TableCell>
               <TableCell>Chambre #2, 1er étage</TableCell>
               <TableCell>3 lits simples</TableCell>
-              <TableCell align="right">42€</TableCell>
+              <TableCell align="right">93€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -237,7 +237,7 @@ export default function Dormir() {
               <TableCell>Pierre & Mireille</TableCell>
               <TableCell>Chambre #3, 1er étage</TableCell>
               <TableCell>1 lit double</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -289,7 +289,7 @@ export default function Dormir() {
               <TableCell>Jacky & Roselyne</TableCell>
               <TableCell>Salon RdC</TableCell>
               <TableCell>1 lit double</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -303,7 +303,7 @@ export default function Dormir() {
               <TableCell>Papou & Jean-Yves</TableCell>
               <TableCell>Salon RdC</TableCell>
               <TableCell>2 lit simples</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -335,7 +335,7 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       <Box mb={2}>
         <Typography variant="h5" fontWeight={"bold"}>
-          Annexe de la Richer{" "}
+          Annexe du Régisseur (Gîte de la Richer)
         </Typography>
         <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
       </Box>
@@ -355,7 +355,7 @@ export default function Dormir() {
               <TableCell>François & Sylvana</TableCell>
               <TableCell>Chambre #1</TableCell>
               <TableCell>2 lits simples</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -369,7 +369,7 @@ export default function Dormir() {
               <TableCell>François & Bernadette</TableCell>
               <TableCell>Chambre #2</TableCell>
               <TableCell>1 lit double</TableCell>
-              <TableCell align="right">28€</TableCell>
+              <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
