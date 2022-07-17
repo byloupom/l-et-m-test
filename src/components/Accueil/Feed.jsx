@@ -107,7 +107,7 @@ const Feed = () => {
           </Button>
         </CardActions>
       </Card>
-      <Card
+      {/** <Card
         id="faireUnCadeau"
         sx={{
           mt: 4,
@@ -115,7 +115,7 @@ const Feed = () => {
             "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
         }}
       >
-        <CardContent>
+          <CardContent>
           <Typography variant="h6" fontWeight={"bold"} gutterBottom>
             💒 Répéter les chants.
           </Typography>
@@ -134,7 +134,7 @@ const Feed = () => {
             Répéter
           </Button>
         </CardActions>
-      </Card>
+      </Card> **/}
     </Masonry>
   );
 };

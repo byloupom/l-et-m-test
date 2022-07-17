@@ -3,12 +3,17 @@ import "./App.css";
 import { ThemeProvider, CssBaseline, Container, Box } from "@mui/material";
 import Hero from "./components/Hero";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link} from "react-router-dom";
 import Accueil from "./components/Accueil/Accueil";
 import Dormir from "./components/Dormir/Dormir";
 import betise from "./images/betise.png";
 
+
+
 function App() {
+
+
+
   return (
     <div className="App">
       <ThemeProvider theme={customTheme}>

@@ -12,6 +12,7 @@ import {
   Box,
   Button,
   Fab,
+  Divider,
 } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -56,18 +57,35 @@ export default function Dormir() {
           <Home />
         </Fab>
       </Link>
-      <Typography gutterBottom mb={2}>
-        Pour ceux qui ont demandé à dormir sur place, notez le nom de votre gite
-        et réglez votre nuit dès à présent.
-      </Typography>
+      <Box mb={4}>
+        <Box mb={2} display={{xs: "block", sm: "flex"}} justifyContent="center" alignItems="center" >
+          <Typography gutterBottom maxWidth="450px" fontSize="18px" padding="24px" >
+            Pour ceux qui ont demandé à dormir sur place, notez le nom de votre
+            gite et réglez votre nuit dès à présent.{" "}
+          </Typography>
+          <Alert>
+            <Typography gutterBottom>
+              Les gites seront ouverts samedi matin 10 heure. En cas de soucis,
+              contacter Olivier de Cambray (propriétaire) au 06 18 40 03 09.
+            </Typography>
+            <Typography gutterBottom>
+              <Box fontWeight="Bold" display="inline" color="primary">
+                ATTENTION:
+              </Box>
+              Les draps sont fournis, mais pas les serviettes et savons.
+            </Typography>
+          </Alert>
+        </Box>
+      </Box>
+      <Divider />
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
+      <Box mb={2} mt={4}>
         <Typography variant="h5" fontWeight={"bold"}>
-          Pavillon du régisseur
+          Pavillon du Régisseur
         </Typography>
-        <Typography variant="body2">Commodités: 2 WC, 2 douches</Typography>
+        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
       </Box>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -82,32 +100,9 @@ export default function Dormir() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>Louis & Marianne</TableCell>
-              <TableCell>Chambre RdC</TableCell>
-              <TableCell>1 lit double</TableCell>
-              <TableCell align="right">28€</TableCell>
-              <TableCell>
-                <Chip label="Réglé" icon={<Check />} />
-              </TableCell>
-            </TableRow>
-            <TableRow>
               <TableCell>Noélie & Elisabeth</TableCell>
-              <TableCell>Salon RdC</TableCell>
-              <TableCell>1 canapé lit</TableCell>
-              <TableCell align="right">14€</TableCell>
-              <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Nicole & Justine</TableCell>
-              <TableCell>Chambre #1, 1er étage</TableCell>
-              <TableCell>2 lits simples 1 lit bébé</TableCell>
+              <TableCell>Salle à Manger RdC</TableCell>
+              <TableCell>1 lit double (canapé lit)</TableCell>
               <TableCell align="right">28€</TableCell>
               <TableCell>
                 <Chip
@@ -119,7 +114,24 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Marthe, Aubry & Victoire</TableCell>
+              <TableCell>Marthe, Aubry et Victoire</TableCell>
+              <TableCell>Chambre #1, 1er étage</TableCell>
+              <TableCell>
+                2 lits simples 1 lit bébé (prévoir un tapis de sol et duvet pour
+                Victoire)
+              </TableCell>
+              <TableCell align="right">28€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Nicole, Justine, et Françoise J.</TableCell>
               <TableCell>Chambre #2, 1er étage</TableCell>
               <TableCell>3 lits simples</TableCell>
               <TableCell align="right">42€</TableCell>
@@ -133,17 +145,12 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Maëlle & Elvire</TableCell>
+              <TableCell>Louis & Marianne</TableCell>
               <TableCell>Chambre #3, 1er étage</TableCell>
               <TableCell>1 lit double</TableCell>
               <TableCell align="right">28€</TableCell>
               <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
+                <Chip label="Réglé" icon={<Check />} />
               </TableCell>
             </TableRow>
           </TableBody>
@@ -186,23 +193,9 @@ export default function Dormir() {
           <TableBody>
             <TableRow>
               <TableCell>Papé & Mamie</TableCell>
-              <TableCell>Chambre RdC</TableCell>
-              <TableCell>1 lit double</TableCell>
+              <TableCell>Rez-de-chaussée</TableCell>
+              <TableCell>1 lit double (canapé lit)</TableCell>
               <TableCell align="right">28€</TableCell>
-              <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>GM</TableCell>
-              <TableCell>Salon RdC</TableCell>
-              <TableCell>1 canapé lit</TableCell>
-              <TableCell align="right">14€</TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -523,20 +516,6 @@ export default function Dormir() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>Josquin</TableCell>
-              <TableCell>Dortoir</TableCell>
-              <TableCell>1 lit simple</TableCell>
-              <TableCell align="right">22€</TableCell>
-              <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
               <TableCell>Colombe</TableCell>
               <TableCell>Dortoir</TableCell>
               <TableCell>1 lit simple</TableCell>
@@ -636,6 +615,34 @@ export default function Dormir() {
             </TableRow>
             <TableRow>
               <TableCell>Long</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Alix</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Jean-Gabriel</TableCell>
               <TableCell>Dortoir</TableCell>
               <TableCell>1 lit simple</TableCell>
               <TableCell align="right">22€</TableCell>
@@ -787,34 +794,6 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Alix</TableCell>
-              <TableCell>Dortoir</TableCell>
-              <TableCell>1 lit simple</TableCell>
-              <TableCell align="right">22€</TableCell>
-              <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Jean-Gabriel</TableCell>
-              <TableCell>Dortoir</TableCell>
-              <TableCell>1 lit simple</TableCell>
-              <TableCell align="right">22€</TableCell>
-              <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
               <TableCell>Antoine</TableCell>
               <TableCell>Dortoir</TableCell>
               <TableCell>1 lit simple</TableCell>
@@ -830,6 +809,48 @@ export default function Dormir() {
             </TableRow>
             <TableRow>
               <TableCell>Vincent</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Josquin</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Maëlle</TableCell>
+              <TableCell>Dortoir</TableCell>
+              <TableCell>1 lit simple</TableCell>
+              <TableCell align="right">22€</TableCell>
+              <TableCell>
+                <Chip
+                  label="Payer maintenant"
+                  onClick={handleClick}
+                  color="primary"
+                  icon={<Payment />}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Elvire</TableCell>
               <TableCell>Dortoir</TableCell>
               <TableCell>1 lit simple</TableCell>
               <TableCell align="right">22€</TableCell>
