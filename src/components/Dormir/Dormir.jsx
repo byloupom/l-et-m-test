@@ -41,7 +41,7 @@ export default function Dormir() {
 
   return (
     <div>
-      <Link to="/l-et-m/" style={{ textDecoration: "none" }}>
+      <Link to="/" style={{ textDecoration: "none" }}>
         <Fab
           color="primary"
           aria-label="Accueil"

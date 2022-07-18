@@ -72,7 +72,7 @@ const Feed = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to="/l-et-m/dormir" style={{ textDecoration: "none" }}>
+          <Link to="/dormir" style={{ textDecoration: "none" }}>
             <Button variant="contained">Régler ma nuit</Button>
           </Link>
         </CardActions>
