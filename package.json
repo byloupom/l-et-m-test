@@ -22,8 +22,8 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy_testToAvoidDomainRemovalInGithub": "echo 'louis-et-marianne.com' > ./build/CNAME && gh-pages -d buildnpm ",
-    "deploy": "gh-pages -d build",
+    "deploy": "echo louis-et-marianne.com > ./build/CNAME && gh-pages -d build",
+    "deploy_testToAvoidDomainRemovalInGithub": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

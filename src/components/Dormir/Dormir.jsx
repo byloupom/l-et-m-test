@@ -27,6 +27,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Alert from "@mui/material/Alert";
 import betise from "../../images/betise.png";
 import { Link } from "react-router-dom";
+import AlertNotifyLouis from "./AlertNotifyLouis";
 
 export default function Dormir() {
   const [open, setOpen] = React.useState(false);
@@ -58,8 +59,18 @@ export default function Dormir() {
         </Fab>
       </Link>
       <Box mb={4}>
-        <Box mb={2} display={{xs: "block", sm: "flex"}} justifyContent="center" alignItems="center" >
-          <Typography gutterBottom maxWidth="450px" fontSize="18px" padding="24px" >
+        <Box
+          mb={2}
+          display={{ xs: "block", sm: "flex" }}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography
+            gutterBottom
+            maxWidth="450px"
+            fontSize="18px"
+            padding="24px"
+          >
             Pour ceux qui ont demandé à dormir sur place, notez le nom de votre
             gite et réglez votre nuit dès à présent.{" "}
           </Typography>
@@ -890,12 +901,7 @@ export default function Dormir() {
             prix de votre lit à Louis Viallet en choissant un mode de paiement
             ci-dessous.
           </DialogContentText>
-          <Alert severity="info">
-            N'oubliez pas de m'envoyer un SMS (06 25 10 09 32) ou{" "}
-            <a href="mailto:viallet.javelot@gmail.com">email</a> une fois le
-            règlement effectué pour que nous mettions à jour le status de
-            paiement.
-          </Alert>
+
           {/* // START Accordion */}
           <Box mt={2}>
             <Accordion
@@ -927,6 +933,7 @@ export default function Dormir() {
                 <Typography fontSize={13}>
                   FR76 4061 8802 9700 0400 0776 919
                 </Typography>
+                <AlertNotifyLouis />
               </AccordionDetails>
             </Accordion>
             <Accordion
@@ -955,13 +962,16 @@ export default function Dormir() {
                   Cliquez sur "Ouvrir Paypal" puis cliquez sur "Envoyer".
                   Saisissez le montant de votre chambre, et voilà !
                 </Typography>
-                <Button
-                  href="https://paypal.me/vialletlouis"
-                  variant="contained"
-                  target="_blank"
-                >
-                  Ouvrir Paypal
-                </Button>
+                <AlertNotifyLouis />
+                <Box mt={2}>
+                  <Button
+                    href="https://paypal.me/vialletlouis"
+                    variant="contained"
+                    target="_blank"
+                  >
+                    Ouvrir Paypal
+                  </Button>
+                </Box>
               </AccordionDetails>
             </Accordion>
             <Accordion
@@ -983,6 +993,7 @@ export default function Dormir() {
                   Si vous avez Lydia, vous n’avez qu’à taper le numéro de Louis
                   (06 25 10 09 32), ainsi que le montant à envoyer. C’est tout !
                 </Typography>
+                <AlertNotifyLouis />
               </AccordionDetails>
             </Accordion>
           </Box>

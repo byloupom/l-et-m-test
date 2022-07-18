@@ -10,4 +10,7 @@ export const customTheme = createTheme({
   typography: {
     fontWeightBold: 900
   },
+  shape: {
+    borderRadius: 4 //default is 4
+  }
   });

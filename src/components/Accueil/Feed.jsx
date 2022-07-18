@@ -10,14 +10,18 @@ import { Link } from "react-router-dom";
 import Masonry from "@mui/lab/Masonry";
 
 const Feed = () => {
+
+
+
   return (
     <Masonry columns={{ xs: 1, sm: 2 }} spacing={2}>
       <Card
         id="etreALHeure"
         sx={{
-          mt: 6,
+          borderRadius: 6,
+          padding: 1,
           boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+            "0px 11px 15px -7px rgb(53 53 128 / 10%), 0px 24px 38px 3px rgb(53 53 128 / 7%), 0px 9px 46px 8px rgb(53 53 128 / 6%)",
         }}
       >
         <CardContent>
@@ -56,8 +60,10 @@ const Feed = () => {
       <Card
         id="nuitAuChateau"
         sx={{
+          borderRadius: 6,
+          padding: 1,
           boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+            "0px 11px 15px -7px rgb(53 53 128 / 10%), 0px 24px 38px 3px rgb(53 53 128 / 7%), 0px 9px 46px 8px rgb(53 53 128 / 6%)",
         }}
       >
         <CardContent>
@@ -80,9 +86,10 @@ const Feed = () => {
       <Card
         id="faireUnCadeau"
         sx={{
-          mt: 4,
+          borderRadius: 6,
+          padding: 1,
           boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 20%), 0px 24px 38px 3px rgb(53 53 128 / 14%), 0px 9px 46px 8px rgb(53 53 128 / 12%)",
+            "0px 11px 15px -7px rgb(53 53 128 / 10%), 0px 24px 38px 3px rgb(53 53 128 / 7%), 0px 9px 46px 8px rgb(53 53 128 / 6%)",
         }}
       >
         <CardContent>
