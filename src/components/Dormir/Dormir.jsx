@@ -1,4 +1,4 @@
-import { Check, Home, Payment, Smartphone } from "@mui/icons-material";
+import { Check, Euro, Home, Payment, Smartphone } from "@mui/icons-material";
 import {
   TableContainer,
   Typography,
@@ -13,6 +13,7 @@ import {
   Button,
   Fab,
   Divider,
+  Stack,
 } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -92,12 +93,15 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2} mt={4}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Pavillon du Régisseur
-        </Typography>
-        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
-      </Box>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Pavillon du Régisseur
+          </Typography>
+          <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
+        </Box>
+        <Chip label="31€ / personne" icon={<Euro />} />
+      </Stack>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -105,7 +109,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -142,10 +146,10 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Nicole, Justine, et Françoise J.</TableCell>
-              <TableCell>Chambre #2, 1er étage</TableCell>
-              <TableCell>3 lits simples</TableCell>
-              <TableCell align="right">93€</TableCell>
+              <TableCell ><Typography fontSize="14px">Nicole & Justine</Typography><br/><Typography fontSize="14px">Françoise J.</Typography></TableCell>
+              <TableCell  >Chambre #2, 1er étage</TableCell>
+              <TableCell><Typography fontSize="14px">2 lits simples</Typography><br/><Typography fontSize="14px">1 lit simple</Typography></TableCell>
+              <TableCell align="right"><Typography fontSize="14px">62€</Typography><br/><Typography fontSize="14px">31€</Typography></TableCell>
               <TableCell>
                 <Chip
                   label="Payer maintenant"
@@ -184,12 +188,17 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Maison du Garde
-        </Typography>
-        <Typography variant="body2">Commodités: 2 WC, 1 douche</Typography>
-      </Box>
+
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Maison du Garde
+          </Typography>
+          <Typography variant="body2">Commodités: 2 WC, 1 douche</Typography>
+        </Box>
+        <Chip label="31€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -197,7 +206,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -278,12 +287,16 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Logis du cocher{" "}
-        </Typography>
-        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
-      </Box>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Logis du cocher
+          </Typography>
+          <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
+        </Box>
+        <Chip label="27.50€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -291,7 +304,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -344,12 +357,17 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Annexe du Régisseur (Gîte de la Richer)
-        </Typography>
-        <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
-      </Box>
+
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Annexe du Régisseur (Gîte de la Richer)
+          </Typography>
+          <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
+        </Box>
+        <Chip label="27.50€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -357,7 +375,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -410,14 +428,19 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Dortoir Ecuries
-        </Typography>
-        <Typography variant="body2">
-          Commodités: WC et douches partagées
-        </Typography>
-      </Box>
+
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Dortoir Ecuries
+          </Typography>
+          <Typography variant="body2">
+            Commodités: WC et douches partagées
+          </Typography>
+        </Box>
+        <Chip label="26€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -425,7 +448,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -506,14 +529,18 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Dortoir Garage{" "}
-        </Typography>
-        <Typography variant="body2">
-          Commodités: WC et douches partagées
-        </Typography>
-      </Box>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Dortoir Garage
+          </Typography>
+          <Typography variant="body2">
+            Commodités: WC et douches partagées
+          </Typography>
+        </Box>
+        <Chip label="22€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -521,7 +548,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
@@ -686,14 +713,18 @@ export default function Dormir() {
       {/* /////////////////////////// */}
       {/* // START Table */}
       {/* /////////////////////////// */}
-      <Box mb={2}>
-        <Typography variant="h5" fontWeight={"bold"}>
-          Dortoir Remise aux calèches{" "}
-        </Typography>
-        <Typography variant="body2">
-          Commodités: WC et douches partagées
-        </Typography>
-      </Box>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Box mb={2} mt={4}>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Dortoir Remise aux Calèches
+          </Typography>
+          <Typography variant="body2">
+            Commodités: WC et douches partagées
+          </Typography>
+        </Box>
+        <Chip label="22€ / personne" icon={<Euro />} />
+      </Stack>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -701,7 +732,7 @@ export default function Dormir() {
               <TableCell>Vos prénoms</TableCell>
               <TableCell>Votre chambre</TableCell>
               <TableCell>Votre lit</TableCell>
-              <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell>Règlement</TableCell>
             </TableRow>
           </TableHead>
