@@ -8,11 +8,8 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Masonry from "@mui/lab/Masonry";
-
+import { Link as MuiLink } from "@mui/material";
 const Feed = () => {
-
-
-
   return (
     <Masonry columns={{ xs: 1, sm: 2 }} spacing={2}>
       <Card
@@ -37,9 +34,17 @@ const Feed = () => {
                 <Typography>Début de la messe</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography>Eglise de Gemignonville,</Typography>
-                <Typography>Place de la Herse,</Typography>
-                <Typography>28140 Eole-en-Beauce</Typography>
+                <MuiLink
+                  href="https://goo.gl/maps/ptxArSGZE49tfAR7A"
+                  color="text.secondary"
+                  underline="hover"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Typography>Eglise de Gemignonville,</Typography>
+                  <Typography>Place de la Herse,</Typography>
+                  <Typography>28140 Eole-en-Beauce</Typography>
+                </MuiLink>
                 <Typography>🚗 Se garer dans la rue</Typography>
               </Grid>
               <Grid item xs={2}>
@@ -49,8 +54,16 @@ const Feed = () => {
                 <Typography>Début du cocktail</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography>Orangerie de Cambray,</Typography>{" "}
-                <Typography>28140 Eole-en-Beauce</Typography>
+                <MuiLink
+                  href="https://goo.gl/maps/H8YL4ExSUXXLQnZC8"
+                  color="text.secondary"
+                  underline="hover"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Typography>Orangerie de Cambray,</Typography>{" "}
+                  <Typography>28140 Eole-en-Beauce</Typography>
+                </MuiLink>
                 <Typography>🚗 Parking réservé au mariage</Typography>
               </Grid>
             </Grid>
@@ -98,8 +111,8 @@ const Feed = () => {
           </Typography>
           <Typography color="text.secondary">
             <Typography>
-              Votre présence compte déjà pour beaucoup ! Mais si vous insistez un
-              emplacement sera prévu pour déposer vos attentions. Vous pouvez
+              Votre présence compte déjà pour beaucoup ! Mais si vous insistez
+              un emplacement sera prévu pour déposer vos attentions. Vous pouvez
               également parcourir notre liste de mariage.
             </Typography>
           </Typography>
