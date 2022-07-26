@@ -3,73 +3,17 @@ import {
   Card,
   CardActions,
   CardContent,
-  Grid,
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Masonry from "@mui/lab/Masonry";
-import { Link as MuiLink } from "@mui/material";
+import InfosPratiques from "./InfosPratiques";
+import Garderie from "./Garderie";
+import Chants from "./Chants";
 const Feed = () => {
   return (
     <Masonry columns={{ xs: 1, sm: 2 }} spacing={2}>
-      <Card
-        id="etreALHeure"
-        sx={{
-          borderRadius: 6,
-          padding: 1,
-          boxShadow:
-            "0px 11px 15px -7px rgb(53 53 128 / 10%), 0px 24px 38px 3px rgb(53 53 128 / 7%), 0px 9px 46px 8px rgb(53 53 128 / 6%)",
-        }}
-      >
-        <CardContent>
-          <Typography variant="h6" fontWeight={"bold"} gutterBottom>
-            🕦 Infos pratiques
-          </Typography>
-          <Typography color="text.secondary">
-            <Grid container xs={12} rowSpacing={2} columnSpacing={1} mt={1}>
-              <Grid item xs={2}>
-                <Typography>15h30</Typography>
-              </Grid>
-              <Grid item xs={4}>
-                <Typography>Début de la messe</Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <MuiLink
-                  href="https://goo.gl/maps/ptxArSGZE49tfAR7A"
-                  color="text.secondary"
-                  underline="hover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Typography>Eglise de Gemignonville,</Typography>
-                  <Typography>Place de la Herse,</Typography>
-                  <Typography>28140 Eole-en-Beauce</Typography>
-                </MuiLink>
-                <Typography>🚗 Se garer dans la rue</Typography>
-              </Grid>
-              <Grid item xs={2}>
-                <Typography>18h00</Typography>
-              </Grid>
-              <Grid item xs={4}>
-                <Typography>Début du cocktail</Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <MuiLink
-                  href="https://goo.gl/maps/H8YL4ExSUXXLQnZC8"
-                  color="text.secondary"
-                  underline="hover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Typography>Orangerie de Cambray,</Typography>{" "}
-                  <Typography>28140 Eole-en-Beauce</Typography>
-                </MuiLink>
-                <Typography>🚗 Parking réservé au mariage</Typography>
-              </Grid>
-            </Grid>
-          </Typography>
-        </CardContent>
-      </Card>
+      <InfosPratiques />
       <Card
         id="nuitAuChateau"
         sx={{
@@ -86,7 +30,7 @@ const Feed = () => {
           <Typography color="text.secondary">
             <Typography>
               Pour ceux qui ont demandé à dormir sur place, notez le nom de
-              votre gite et réglez votre nuit dès à présent.
+              votre gîte et réglez votre nuit dès à présent.
             </Typography>
           </Typography>
         </CardContent>
@@ -127,6 +71,9 @@ const Feed = () => {
           </Button>
         </CardActions>
       </Card>
+      <Garderie />
+      <Chants />
+      {/* zf */}  
       {/** <Card
         id="faireUnCadeau"
         sx={{

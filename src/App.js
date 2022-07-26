@@ -1,6 +1,6 @@
 import { customTheme } from "./themes/theme.ts";
 import "./App.css";
-import { ThemeProvider, CssBaseline, Container, Box } from "@mui/material";
+import { ThemeProvider, CssBaseline, Container, Box, Typography } from "@mui/material";
 import Hero from "./components/Hero";
 
 import { Routes, Route, Link, useLocation } from "react-router-dom";
@@ -43,6 +43,15 @@ function App() {
             >
               <img src={betise} alt="Bétise de Cambray" width="100px" />
             </Box>
+            <Box display="flex" 
+        alignItems="center"
+        justifyContent="center"><Typography 
+        color="text.secondary"
+        sx={{ mt: 1, fontFamily: "Monospace" }}
+
+      >
+        📨 Louis et Marianne, 14 rue de Strasbourg, 92600 Asnières-sur-Seine
+      </Typography></Box>
           </Container>
         </ThemeProvider>
       </Wrapper>

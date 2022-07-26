@@ -73,18 +73,18 @@ export default function Dormir() {
             padding="24px"
           >
             Pour ceux qui ont demandé à dormir sur place, notez le nom de votre
-            gite et réglez votre nuit dès à présent.{" "}
+            gîte et réglez votre nuit dès à présent.{" "}
           </Typography>
           <Alert>
             <Typography gutterBottom>
-              Les gites seront ouverts samedi matin 10 heure. En cas de soucis,
+              Les gîtes seront ouverts samedi matin 10 heure. En cas de soucis,
               contacter Olivier de Cambray (propriétaire) au 06 18 40 03 09.
             </Typography>
             <Typography gutterBottom>
               <Box fontWeight="Bold" display="inline" color="primary">
-                ATTENTION:
+                ATTENTION :{" "}
               </Box>
-              Les draps sont fournis, mais pas les serviettes et savons.
+              Les draps sont fournis, mais pas les serviettes ni les savons.
             </Typography>
           </Alert>
         </Box>
@@ -100,7 +100,12 @@ export default function Dormir() {
           </Typography>
           <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
         </Box>
-        <Chip label="31€ / personne" icon={<Euro />} />
+        <Chip
+          label="31€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -121,7 +126,7 @@ export default function Dormir() {
               <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 62€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -138,7 +143,7 @@ export default function Dormir() {
               <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 62€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -146,13 +151,30 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell ><Typography fontSize="14px">Nicole & Justine</Typography><br/><Typography fontSize="14px">Françoise J.</Typography></TableCell>
-              <TableCell  >Chambre #2, 1er étage</TableCell>
-              <TableCell><Typography fontSize="14px">2 lits simples</Typography><br/><Typography fontSize="14px">1 lit simple</Typography></TableCell>
-              <TableCell align="right"><Typography fontSize="14px">62€</Typography><br/><Typography fontSize="14px">31€</Typography></TableCell>
               <TableCell>
+                <Typography fontSize="14px">Nicole & Justine</Typography>
+                <br />
+                <Typography fontSize="14px">Françoise J.</Typography>
+              </TableCell>
+              <TableCell>
+                Chambre #2, 1er étage
+                <br />
+                <br />
+              </TableCell>
+              <TableCell>
+                <Typography fontSize="14px">2 lits simples</Typography>
+                <br />
+                <Typography fontSize="14px">1 lit simple</Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography fontSize="14px">62€</Typography>
+                <br />
+                <Typography fontSize="14px">31€</Typography>
+              </TableCell>
+              <TableCell>
+                <Chip label="Réglé" icon={<Check />} sx={{ mb: 1 }} />
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 31€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -196,7 +218,13 @@ export default function Dormir() {
           </Typography>
           <Typography variant="body2">Commodités: 2 WC, 1 douche</Typography>
         </Box>
-        <Chip label="31€ / personne" icon={<Euro />} />
+
+        <Chip
+          label="31€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -218,7 +246,7 @@ export default function Dormir() {
               <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 62€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -232,7 +260,7 @@ export default function Dormir() {
               <TableCell align="right">62€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 62€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -246,7 +274,7 @@ export default function Dormir() {
               <TableCell align="right">93€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 93€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -259,12 +287,7 @@ export default function Dormir() {
               <TableCell>1 lit double</TableCell>
               <TableCell align="right">62€</TableCell>
               <TableCell>
-                <Chip
-                  label="Payer maintenant"
-                  onClick={handleClick}
-                  color="primary"
-                  icon={<Payment />}
-                />
+                <Chip label="Réglé" icon={<Check />} />
               </TableCell>
             </TableRow>
           </TableBody>
@@ -294,7 +317,12 @@ export default function Dormir() {
           </Typography>
           <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
         </Box>
-        <Chip label="27.50€ / personne" icon={<Euro />} />
+        <Chip
+          label="27.50€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -316,7 +344,7 @@ export default function Dormir() {
               <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 55€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -324,13 +352,35 @@ export default function Dormir() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Papou & Jean-Yves</TableCell>
-              <TableCell>Salon RdC</TableCell>
-              <TableCell>2 lit simples</TableCell>
-              <TableCell align="right">55€</TableCell>
               <TableCell>
+                Papou
+                <br />
+                <br />
+                Jean-Yves
+              </TableCell>
+              <TableCell>
+                Salon RdC
+                <br />
+                <br />
+                <br />
+              </TableCell>
+              <TableCell>
+                2 lit simples
+                <br />
+                <br />
+                <br />
+              </TableCell>
+              <TableCell align="right">
+                27.50€
+                <br />
+                <br />
+                27.50€
+              </TableCell>
+              <TableCell>
+                <Chip label="Réglé" icon={<Check />} sx={{ mb: 1 }} />
+                <br />
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 27.50€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -365,7 +415,13 @@ export default function Dormir() {
           </Typography>
           <Typography variant="body2">Commodités: 1 WC, 1 douche</Typography>
         </Box>
-        <Chip label="27.50€ / personne" icon={<Euro />} />
+
+        <Chip
+          label="27.50€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -387,7 +443,7 @@ export default function Dormir() {
               <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 55€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -401,7 +457,7 @@ export default function Dormir() {
               <TableCell align="right">55€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 55€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -438,7 +494,12 @@ export default function Dormir() {
             Commodités: WC et douches partagées
           </Typography>
         </Box>
-        <Chip label="26€ / personne" icon={<Euro />} />
+        <Chip
+          label="26€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -460,7 +521,7 @@ export default function Dormir() {
               <TableCell align="right">26€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 26€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -474,7 +535,7 @@ export default function Dormir() {
               <TableCell align="right">26€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 26€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -488,7 +549,7 @@ export default function Dormir() {
               <TableCell align="right">26€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 26€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -502,7 +563,7 @@ export default function Dormir() {
               <TableCell align="right">26€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 26€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -538,7 +599,12 @@ export default function Dormir() {
             Commodités: WC et douches partagées
           </Typography>
         </Box>
-        <Chip label="22€ / personne" icon={<Euro />} />
+        <Chip
+          label="22€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -560,7 +626,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -574,7 +640,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -588,7 +654,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -602,7 +668,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -616,7 +682,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -630,7 +696,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -644,7 +710,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -658,7 +724,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -672,7 +738,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -686,7 +752,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -722,7 +788,12 @@ export default function Dormir() {
             Commodités: WC et douches partagées
           </Typography>
         </Box>
-        <Chip label="22€ / personne" icon={<Euro />} />
+        <Chip
+          label="22€ / personne"
+          icon={<Euro />}
+          onClick={handleClick}
+          color="primary"
+        />
       </Stack>
 
       <TableContainer component={Paper}>
@@ -744,7 +815,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -758,7 +829,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -772,7 +843,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -786,7 +857,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -800,7 +871,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -814,7 +885,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -828,7 +899,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -842,7 +913,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -856,7 +927,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -870,7 +941,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -884,7 +955,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
@@ -898,7 +969,7 @@ export default function Dormir() {
               <TableCell align="right">22€</TableCell>
               <TableCell>
                 <Chip
-                  label="Payer maintenant"
+                  label="Payer 22€"
                   onClick={handleClick}
                   color="primary"
                   icon={<Payment />}
