@@ -39,7 +39,7 @@ export default function InfosPratiques() {
               target="_blank"
               rel="noopener"
             >
-              <Typography>Eglise de Gemignonville,</Typography>
+              <Typography>Eglise de Germignonville,</Typography>
               <Typography>Place de la Herse,</Typography>
               <Typography>28140 Eole-en-Beauce</Typography>
             </MuiLink>

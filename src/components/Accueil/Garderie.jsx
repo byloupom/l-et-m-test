@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  Button,
   Card,
-  CardActions,
   CardContent,
   List,
   ListItem,
@@ -27,7 +25,7 @@ export default function Garderie() {
           </Typography>
           <Typography color="text.secondary">
             <Typography>
-              2 babysitters vous aideront à garder vos enfants de 18h00 à 02h00
+              4 babysitters vous aideront à garder vos enfants de 18h00 à 02h00
               du matin, ils restent néanmoins sous votre responsabilité :{" "}
               <List sx={{ listStyleType: "disc" }}>
                 <ListItem sx={{ display: "list-item", ml: 2 }}>

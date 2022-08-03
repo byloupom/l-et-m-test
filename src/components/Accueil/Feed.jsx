@@ -102,6 +102,35 @@ const Feed = () => {
           </Button>
         </CardActions>
       </Card> **/}
+      <Card
+        id="Covoiturage"
+        sx={{
+          borderRadius: 6,
+          padding: 1,
+          boxShadow:
+            "0px 11px 15px -7px rgb(53 53 128 / 10%), 0px 24px 38px 3px rgb(53 53 128 / 7%), 0px 9px 46px 8px rgb(53 53 128 / 6%)",
+        }}
+      >
+        <CardContent>
+          <Typography variant="h6" fontWeight={"bold"} gutterBottom>
+          🚗 Covoiturage
+          </Typography>
+          <Typography color="text.secondary">
+            <Typography>
+              Si vous avez une voiture, inscrivez-vous en onglet 1. Si vous cherchez une place, direction l'onglet 2.
+            </Typography>
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant="contained"
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1YkMHGOGQ9ZjkTPHOAZh-beYD-FpkuAffXn9F92-t-Zw/edit?usp=sharing"
+          >
+            S'inscrire
+          </Button>
+        </CardActions>
+      </Card>
     </Masonry>
   );
 };
