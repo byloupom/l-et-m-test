@@ -1,7 +1,7 @@
 {
   "commentairePersoLouis": "https://byloupom.github.io/",
   "homepage": "/",
-  "name": "l-et-m",
+  "name": "l-et-m-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "echo louis-et-marianne.com > ./build/CNAME && gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "deploy_testToAvoidDomainRemovalInGithub": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
